@@ -1,0 +1,130 @@
+theme: lone-wolf-theme
+remote_theme: null
+bootswatch_theme: united
+lang: en_US
+title: Lone Wolf Theme
+description: A simple bootstrap based jekyll theme.
+url: ''
+baseurl: ''
+author: mani_d2
+twitter:
+  username: mani_d2
+  card: summary
+logo: assets/images/lwt-logo-wolf-v2.png
+webmaster_verifications:
+  google: null
+  bing: null
+  alexa: null
+  yandex: null
+  baidu: null
+comments:
+  provider: false
+  disqus:
+    shortname: null
+atom_feed:
+  path: null
+search: null
+search_full_content: null
+search_provider: null
+google:
+  search_engine_id: null
+  instant_search: null
+analytics:
+  provider: false
+  google:
+    tracking_id: null
+    anonymize_ip: null
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - '*.sublime-project'
+  - '*.sublime-workspace'
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+  - /docs
+  - /test
+keep_files:
+  - .git
+  - .svn
+encoding: utf-8
+markdown_ext: 'markdown,mkdown,mkdn,mkd,md'
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: |+
+
+
+incremental: false
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: 'lsquo,rsquo,ldquo,rdquo'
+  enable_coderay: false
+sass:
+  sass_dir: _sass
+  style: compressed
+permalink: '/:categories/:title/'
+paginate: 5
+paginate_path: '/page:num/'
+timezone: ''
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jemoji
+  - jekyll-include-cache
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jemoji
+  - jekyll-include-cache
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+defaults:
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
+      show_hero: true
+      show_author: true
+      show_toc: true
+      share: true
+      show_comments: false
+      show_ads: false
+  - scope:
+      path: ''
+    values:
+      image: assets/images/lwt-logo-wolf-v2.png
+      image_alt: Lone Wolf Theme logo version 2

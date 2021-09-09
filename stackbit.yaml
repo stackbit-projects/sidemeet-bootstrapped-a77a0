@@ -1,0 +1,304 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  page_1:
+    type: page
+    label: Page 1
+    match:
+      - _pages/404.md
+      - _pages/about.md
+      - _pages/features.md
+      - docs/_pages/404.md
+      - docs/_pages/about.md
+      - docs/_pages/apps.md
+      - docs/_pages/contribute.md
+      - docs/_pages/dependencies.md
+      - docs/_pages/features.md
+      - docs/_pages/search.md
+      - docs/_pages/todo.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: permalink
+        label: Permalink
+  page_2:
+    type: page
+    label: Page 2
+    match:
+      - _pages/categories.md
+      - docs/_pages/all-posts.md
+      - docs/_pages/categories.md
+      - docs/_pages/tags.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: excerpt
+        label: Excerpt
+  page_3:
+    type: page
+    label: Page 3
+    match:
+      - _posts/2019-02-17-welcome-to-jekyll.md
+      - docs/_posts/2019-02-17-welcome-to-jekyll.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: excerpt
+        label: Excerpt
+      - type: datetime
+        name: date
+        label: Date
+      - type: string
+        name: categories
+        label: Categories
+      - type: image
+        name: image
+        label: Image
+      - type: string
+        name: image_alt
+        label: Image Alt
+      - type: string
+        name: image_caption
+        label: Image Caption
+      - type: string
+        name: permalink
+        label: Permalink
+  doc:
+    type: page
+    label: Doc
+    folder: codes/doc
+    match: '*'
+    fields: []
+  page:
+    type: page
+    label: Page
+    folder: docs/_pages
+    match:
+      - home.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: excerpt
+        label: Excerpt
+      - type: boolean
+        name: action
+        label: Action
+      - type: list
+        name: action_btn
+        label: Action Btn
+        items:
+          type: model
+          models:
+            - object_thbh9z2qrz
+            - object_fsho3xojh3
+            - object_8115t98zht
+      - type: list
+        name: feature_rows
+        label: Feature Rows
+        items:
+          type: object
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: excerpt
+              label: Excerpt
+            - type: string
+              name: url
+              label: Url
+            - type: image
+              name: img_path
+              label: Img Path
+            - type: string
+              name: img_alt
+              label: Img Alt
+  blog:
+    type: data
+    label: Blog
+    file: blog.yml
+    fields:
+      - type: list
+        name: authors
+        label: Authors
+        items:
+          type: object
+          fields:
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: headline
+              label: Headline
+            - type: image
+              name: avatar
+              label: Avatar
+            - type: list
+              name: follow
+              label: Follow
+              items:
+                type: object
+                fields:
+                  - type: string
+                    name: label
+                    label: Label
+                  - type: string
+                    name: icon
+                    label: Icon
+      - type: list
+        name: share
+        label: Share
+        items:
+          type: object
+          fields:
+            - type: string
+              name: label
+              label: Label
+            - type: string
+              name: icon
+              label: Icon
+  nav:
+    type: data
+    label: Nav
+    file: nav.yml
+    fields:
+      - type: list
+        name: header
+        label: Header
+        items:
+          type: object
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: url
+              label: Url
+            - type: string
+              name: description
+              label: Description
+      - type: list
+        name: footer
+        label: Footer
+        items:
+          type: model
+          models:
+            - object_7qlpkc21mi
+            - object_qo9c5whtl7
+            - object_0slrlv62ak
+  object_thbh9z2qrz:
+    type: object
+    label: Object 1
+    fields:
+      - type: string
+        name: label
+        label: Label
+      - type: string
+        name: fa_icon
+        label: Fa Icon
+      - type: string
+        name: class
+        label: Class
+      - type: string
+        name: url
+        label: Url
+  object_fsho3xojh3:
+    type: object
+    label: Object 2
+    fields:
+      - type: boolean
+        name: dropdown
+        label: Dropdown
+  object_8115t98zht:
+    type: object
+    label: Object 3
+    fields:
+      - type: list
+        name: dropdown_items
+        label: Dropdown Items
+        items:
+          type: object
+          fields:
+            - type: string
+              name: label
+              label: Label
+            - type: string
+              name: url
+              label: Url
+            - type: string
+              name: fa_icon
+              label: Fa Icon
+  object_7qlpkc21mi:
+    type: object
+    label: Object 4
+    fields:
+      - type: string
+        name: owner
+        label: Owner
+      - type: string
+        name: bio
+        label: Bio
+  object_qo9c5whtl7:
+    type: object
+    label: Object 5
+    fields:
+      - type: list
+        name: social
+        label: Social
+        items:
+          type: object
+          fields:
+            - type: string
+              name: label
+              label: Label
+            - type: string
+              name: icon
+              label: Icon
+  object_0slrlv62ak:
+    type: object
+    label: Object 6
+    fields:
+      - type: list
+        name: feed
+        label: Feed
+        items:
+          type: object
+          fields:
+            - type: string
+              name: label
+              label: Label
+            - type: string
+              name: icon
+              label: Icon
+            - type: string
+              name: url
+              label: Url
